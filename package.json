@@ -1,7 +1,7 @@
 {
   "name": "aora",
   "version": "1.0.0",
-  "main": "expo/AppEntry.js",
+  "main": "expo-router/entry",
   "scripts": {
     "start": "expo start",
     "android": "expo start --android",
@@ -9,10 +9,14 @@
     "web": "expo start --web"
   },
   "dependencies": {
+    "@expo/metro-runtime": "~3.2.3",
     "expo": "~51.0.28",
+    "expo-router": "^3.5.23",
     "expo-status-bar": "~1.12.1",
-    "react": "18.2.0",
-    "react-native": "0.74.5"
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-native": "0.74.5",
+    "react-native-web": "~0.19.10"
   },
   "devDependencies": {
     "@babel/core": "^7.20.0"
