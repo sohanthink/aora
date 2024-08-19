@@ -9,7 +9,7 @@ const App = () => {
             <Text className="text-3xl font-pblack">Auro</Text>
             <Text className="text-3xl bg-black text-white p-5 mb-2">nice</Text>
             <StatusBar style='auto' />
-            <Link href="/profile" style={{ color: 'blue' }}>go to profile</Link>
+            <Link href="/home" style={{ color: 'blue' }}>go to home</Link>
         </View>
     )
 }
