@@ -1,25 +1,17 @@
-import { StyleSheet, Text, View } from 'react-native'
+import { Text, View } from 'react-native'
 import React from 'react'
-import { Colors } from 'react-native/Libraries/NewAppScreen'
 import { Link } from 'expo-router'
+import { StatusBar } from 'expo-status-bar'
 
-const RootLayout = () => {
+const App = () => {
     return (
-        <View style={styles.container}>
-            <Text>rootLayout</Text>
+        <View className="flex-1 items-center justify-center bg-green-50">
+            <Text className="text-3xl font-pblack">Auro</Text>
+            <Text className="text-3xl bg-black text-white p-5 mb-2">nice</Text>
+            <StatusBar style='auto' />
             <Link href="/profile" style={{ color: 'blue' }}>go to profile</Link>
         </View>
     )
 }
 
-export default RootLayout
-
-const styles = StyleSheet.create({
-    container: {
-        display: 'flex',
-        flex: '1',
-        alignItems: 'center',
-        justifyContent: 'center',
-        backgroundColor: 'red',
-    },
-})
+export default App
