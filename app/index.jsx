@@ -39,7 +39,7 @@ const App = () => {
                     <Text className="text-sm font-pregular text-gray-100 text-center mt-7 mx-2">Where creativity meets innovation: embark on a journey of limitless exploration with Aora</Text>
                     <CustomButton
                         title="Continue With Email"
-                        handlePress={() => router.push('/sign-up')}
+                        handlePress={() => router.push('/sign-in')}
                         containerStyles="w-full mt-7"
                     />
                 </View>
