@@ -18,7 +18,7 @@ const SignUp = () => {
     const [isSubmitting, setSubmitting] = useState(false)
 
     const submit = () => {
-
+        Alert.alert("Success", "User signed in successfully");
     }
 
     return (
