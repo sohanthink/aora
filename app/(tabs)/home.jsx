@@ -2,6 +2,7 @@ import { View, Text, SafeAreaView, FlatList, Image } from 'react-native'
 import React from 'react'
 
 import { images } from '../../constants'
+import SearchInput from '../../components/SearchInput';
 
 
 const DATA = [
@@ -44,6 +45,11 @@ const Home = () => {
                                 />
                             </View>
                         </View>
+
+                        <SearchInput
+                            placeholder="Search something here!!"
+                        />
+
                     </View>
                 )}
             />
