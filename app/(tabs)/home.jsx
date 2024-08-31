@@ -5,22 +5,33 @@ import { images } from '../../constants'
 import SearchInput from '../../components/SearchInput';
 import Trending from '../../components/Trending';
 import EmptyState from '../../components/EmptyState';
+import DataFetch from '../../utils/DataFetch';
 
 
-const DATA = [
-    {
-        id: 'bd7acbea-c1b1-46c2-aed5-3ad53abb28ba',
-        title: 'First Item',
-    },
-    {
-        id: '3ac68afc-c605-48d3-a4f8-fbd91aa97f63',
-        title: 'Second Item',
-    },
-    {
-        id: '58694a0f-3da1-471f-bd96-145571e29d72',
-        title: 'Third Item',
-    },
-];
+const fetchedData = () => {
+    return [
+        {
+            id: 'bd7acbea-c1b1-46c2-aed5-3ad53abb28ba',
+            title: 'First Item',
+        },
+        {
+            id: '3ac68afc-c605-48d3-a4f8-fbd91aa97f63',
+            title: 'Second Item',
+        },
+        {
+            id: '58694a0f-3da1-471f-bd96-145571e29d72',
+            title: 'Third Item',
+        },
+        {
+            id: '58694a0f-3fbvjdfhbvjhdf-145571e29d72',
+            title: 'fourth Item',
+        },
+        {
+            id: '58694a0f-nkjdsfgnkjn-145571e29d72',
+            title: 'fifth Item',
+        },
+    ];
+}
 
 // const DATA = [];
 const TRENDINGDATA = [
@@ -45,17 +56,22 @@ const TRENDINGDATA = [
 
 const Home = () => {
 
+    const { data, isLoading, refetch } = DataFetch(fetchedData)
+
+    console.log(data);
+
+
     const [refreshing, setRefreshing] = useState(false)
     const onRefresh = async () => {
         setRefreshing(true)
-        // logic for refresh/ fetch data again to the array
+        await refetch()
         setRefreshing(false)
     }
 
     return (
         <SafeAreaView className="bg-primary h-full">
             <FlatList
-                data={DATA}
+                data={data}
                 keyExtractor={(item) => item.id}
                 renderItem={({ item }) => (
                     <Text className="text-white">{item.title}</Text>
