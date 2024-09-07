@@ -30,7 +30,7 @@ const VideoCard = ({ title, avatar, creator, thumbnail, video }) => {
                         (
                             <Video
                                 source={{ uri: video }}
-                                className="w-full h-[200px] rounded-xl bg-white/10"
+                                className="w-full h-[200px] rounded-xl  "
                                 resizeMode={ResizeMode.CONTAIN}
                                 useNativeControls
                                 shouldPlay
@@ -51,9 +51,7 @@ const VideoCard = ({ title, avatar, creator, thumbnail, video }) => {
                                 <Image source={icons.play} resizeMode='contain' className="w-12 h-12 absolute" />
                             </TouchableOpacity>
                         )
-
                 }
-
             </View>
         </View>
     )
